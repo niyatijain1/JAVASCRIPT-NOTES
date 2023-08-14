@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let p1 = new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         console.log("resolved after two seconds")
+        //         resolve(56)
+        //     },2000)
+        // })
+
+        // p1.then((value)=>{
+        //     console.log(value)
+        //     let p2 = new Promise((resolve,reject)=>{
+        //         setTimeout(()=>{
+        //             resolve("promise 2")
+        //         },2000)
+        //     })
+        //     return p2
+        // }).then((value)=>{
+        //     console.log(value)
+        //     console.log("we are done")
+        //     return 2
+        // }).then((value)=>{
+        //     console.log("we are pakka done")
+        // })
+
+
+
+        // rewrite the loadscript function using promises 
+
+
+         const loadScript=(src)=>{
+            return new Promise((resolve,reject)=>{
+                let script = document.createElement("script")
+                script.src = src
+                document.body.appendChild(script)
+                script.onload=()=>{
+                    resolve(1)
+                }
+                script.onerror=()=>{
+                    reject(0)
+                }
+            })
+         }
+
+         let p = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js")
+
+
+        //  p.then((value)=>{
+        //     console.log(value)
+        //  },(error)=>{
+        //     console.log(error)
+        //  })
+        // //  the above then gives value like 1 in above example and if error and use syntax to print error value it will give 0 
+
+        p.then((value)=>{
+            console.log(value)
+            return loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js")
+        }).then((value)=>{
+            console.log("another script")
+        }).catch((error)=>{
+            console.log("we hve an error")
+        })
+
+    </script>
+</body>
+</html>

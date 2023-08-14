@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element only navigation</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About me</li>
+            <li>Hire me</li>
+        </ul>
+    </nav>
+    <div class="conatiner">
+        <p>hey i m a good girl</p>
+    </div>
+    <script>
+        const chnageBgRed=()=>{
+            document.body.firstElementChild.style.background="red"
+
+        }
+
+
+        let a = document.body
+        console.log("body first elemnt child is:" , a.firstElementChild)
+        console.log("body first  child is:" , a.firstChild)
+
+        chnageBgRed()
+    </script>
+    
+</body>
+</html>

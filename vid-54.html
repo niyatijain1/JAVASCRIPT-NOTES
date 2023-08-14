@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // the solution to callback hell is promises, a promise is a promise to code execution, the code either fails or executes in both the cases subscriber gets notified 
+
+
+
+        let promise = new Promise(function(resolve,reject){
+            alert("hello")
+            resolve(56);
+        })
+
+        console.log("hello1")
+
+        setTimeout(function(){
+            console.log("hello2")
+        },2000)
+
+
+        console.log("hello3")
+        console.log(promise)
+
+        // javascript runs asynchronously we use promise for parallel execution 
+
+
+
+    </script>
+</body>
+</html>

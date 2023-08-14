@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html attributes and their methods</title>
+</head>
+<body>
+    <div id = "first" class="hey" data-game ="mario" data-player ="harry">
+        hey i am container
+    </div>
+   <script>
+
+    // always use below statement 
+    
+
+    let a = first.getAttribute("class")
+    // the above method is used to get thevalue of an attribute 
+    console.log(a)
+
+    //  hasAttributemethod used to check an existence of an attribute
+    
+    console.log(first.hasAttribute("class"))
+    console.log(first.hasAttribute("style"))
+
+    first.setAttribute("hidden","true")
+    
+    // the above method is used to set the value of an attribute 
+    console.log(first.getAttribute("hidden"))
+
+    first.setAttribute("class", "true sachin")
+    console.log(first.getAttribute("class"))
+    // we can also set classes using space in between 
+
+
+    // first.removeAttribute("class")
+    // the above method is use to remove attribute from an element 
+
+    console.log(first.attributes) 
+    // the above method to get all elements of an element 
+
+    // we can always create custom attributes but the ones with data- are reserved for programmers use only and are available in a property named dataset 
+    console.log(first.dataset)
+    console.log(first.dataset.player)
+    console.log(first.dataset.game)
+    console.log(first.getAttribute("data-game"))
+
+    
+
+    
+     
+
+
+
+   </script> 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       class Railwayform{
+
+        constructor(givenname,trainno,address){
+            console.log(`constructor called with givenname as: ${givenname} and trainno as ${trainno} with address ${address}`)
+            this.name = givenname
+           this.trainno = trainno
+           this.address = address
+
+        }
+
+        preview(){
+
+            alert(`${this.name} : your form  for trainno ${this.trainno} with address ${this.address}`)
+
+        }
+        
+
+
+submit(){
+    alert(`${this.name} : your form is submitted for trainno ${this.trainno} with address ${this.address}`)
+}
+
+cancel(){
+    alert(`${this.name} : your form is cancelled for tarinno ${this.trainno} with address ${this.address}` )
+
+    this.trainno = 0
+}
+}
+
+let harryForm = new Railwayform("Harry",12345, "gr noida alpha 2")
+
+harryForm.preview()
+harryForm.submit()
+harryForm.cancel()
+harryForm.preview()
+
+    </script>
+</body>
+</html>

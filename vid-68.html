@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // cookies are small strings of data directly stored in the browser 
+        // in javascript document.cookie gives all cookies seperated by a semi-colon
+        // alert(document.cookie)
+        // cookie is a way to store data 
+
+
+        console.log(document.cookie)
+        // here document.cookie if we do write operations more cokkies gets added not that it gets updated
+        document.cookie= "name=harry1" 
+        document.cookie = "name2=harry234"
+        document.cookie= "name=harry11" 
+        // through above statement name value cookie gets updated 
+        console.log(document.cookie)
+
+        let a =prompt("enter the key")
+        let b =prompt("enter the value")
+        document.cookie= `${encodeURIComponent(a)}=${encodeURIComponent(b)}`
+        console.log(document.cookie)
+        </script>
+</body>
+</html>

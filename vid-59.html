@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // there is a special syntax to work with promises in javascript 
+        // async function harry(){
+        //     return 2
+        // }
+
+        // harry().then((x)=>{
+        //     console.log(x)
+        // })
+
+        // the above async fucntion always returns a promise even if a cosntant is returned we can alos use the handler with async function 
+
+        async function  harry(){
+        let delhiw = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("value 21")
+            },1000)
+        })
+
+        let noidaw = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("value 27")
+            },2000)
+        })
+
+        // delhiw.then(alert)
+        // noidaw.then(alert)
+
+        console.log("we are fetching delhi weather plze wait...")
+        let delhiweather = await delhiw
+        console.log("fetched delhi weather" + delhiweather)
+        console.log("we are fetching noida weather plze wait...")
+        let noidaweather = await noidaw
+        console.log("fetched noida weather" + noidaweather)  
+
+        return [delhiweather + noidaweather]
+    }
+
+    const cherry=async()=>{
+        console.log("i am cherry")
+    }
+    const main1 = async()=>{
+
+        console.log("welcome to weather control room")
+        let a =  await harry()
+        let b =  await cherry()
+    }
+    main1()
+    
+
+
+    </script>
+</body>
+</html>

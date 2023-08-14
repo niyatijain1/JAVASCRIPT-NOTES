@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const f =()=>{
+            try{
+                let a = 1;
+                // console.log(program)
+                console.log("program ran successfully")
+                return
+            }catch(error){
+                console.log(error.name)
+                console.log(error.message)
+            }
+            finally{
+                console.log("i always work")
+            }
+        }
+        f()
+
+        // the try catch syntax may have one more code clause as finally 
+        // if  it exists it runs in all either either if try has not error or catch has no errors 
+        // if there is return in try finally is executed just before the control goes to outer code 
+        console.log("end")
+    </script>
+</body>
+</html>

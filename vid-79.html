@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            login(){
+                console.log("employee is logged in")
+            }
+            logout(){
+                cosnole.log("employee is logged out")
+            }
+
+            requestCofee(x){
+                console.log(` employee requested ${x} cofee`)
+            }
+            requestleaves(leaves){
+                console.log(`employe requested ${leaves }leaves auto-approved`)
+            }
+        }
+
+        class Developer extends Employee{
+            requestleaves(leaves){
+                // console.log(`employe requested ${leaves+1} one extra`)
+                super.requestleaves(4)
+                console.log(`one extra`)
+            }
+        }
+
+        let rohan = new Developer()
+        let harry = new Employee()
+        // harry.requestleaves(2)
+        rohan.requestleaves(3)
+    </script>
+</body>
+</html>

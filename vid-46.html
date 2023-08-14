@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script> 
+        // let a = setTimeout(function (){
+        //     alert("i m inside settimeout")
+        // },5000)
+        // console.log(a) 
+
+        // clearTimeout(a)
+        // clearTimeout cancels the execution of function 
+
+        // setTimeout is used to run a function once after the interval of time and returns a timerid
+       
+
+        // setInterval runs a functions after set time again and again supose run a function in every 2sec as shown below 
+
+        // setInterval(function sum (){
+        //     alert("hello")
+        // },2000)
+
+        // also 
+        const mul=(a,b,c)=>{
+            alert(a*b*c)
+        }
+        let a = setInterval(mul,2000,1,2,3)
+        console.log(a)
+         clearInterval(a)
+    </script>
+</body>
+</html>

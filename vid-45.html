@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="first" class= "red-black purple">
+        <span>hey i m span</span>
+    </div>
+    <script>
+        console.log(first.classList)
+        first.className = "red-black yellow"
+        // if we assign something to ele.className it replaces the whole string of classes 
+        console.log(first.classList)
+        first.classList.remove("yellow")
+        // the above is used to remove a class from list of classes 
+        first.classList.add("yellow")
+        // the above is used to add a class in a classList 
+        first.classList.toggle("yellow")
+       console.log( first.classList.contains("yellow"))
+
+        // the above toggle adds the class if doesnt exist or removes it if doesnt exist 
+        
+    </script>
+</body>
+</html>

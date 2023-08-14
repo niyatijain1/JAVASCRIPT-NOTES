@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container" onmouseenter="console.log('container ke andar mousegaya')">
+        <button onclick="alert('hello'); let a = 6; console.log(a);s">click me</button>
+    </div>
+    <script>
+        // an event is a signal that something has happened and all dom nodes generate signals 
+
+        // some imp dom events are 
+        // 1) mouse events- click , right click , mouseover
+        // 2) keyboard events- keydown and keyup 
+        // 3) form element events- submit, focus 
+        // 4) documents events- DOMContentLoaded (when your whole document gets loaded the domconetentloaded events occurs) 
+
+        // events can be handelled through html attributes as used above using attributes and also can be handeled through onclick property as shown below 
+        
+        let a = document.getElementsByClassName("container")[0]
+        a.onclick =()=>{
+            let b = document.getElementsByClassName("container")[0]
+            b.innerHTML= "helloworld"
+        }
+
+
+
+
+    </script>
+</body>
+</html>

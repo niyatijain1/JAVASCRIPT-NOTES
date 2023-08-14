@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(()=>{
+            console.log("hacking wifi")
+        },1000)
+        setTimeout(()=>{
+            console.log("hacking facebook id")
+            // console.log(rahul)
+            // here the script execution will noyt stop because of rahul all setTimeout function will execute 
+        },2000)
+        setTimeout(()=>{
+            console.log("hacking insta id")
+        },3000)
+        setTimeout(()=>{
+            console.log("hacking twitter id")
+        },4000)
+
+        // the below try catch syntax is used for to the syntax in console not to show it as error , the try actch syntaxd has two blocks  try and catch blocks if the try fails then code inside actch is executed 
+        
+        
+
+        // the below code will not work as try works with synchronous code not with scheduled code ex setTimeout it will show error
+        // try{
+        //     setTimeout(()=>{
+        //         console.log(rahul)
+        //     },100)
+        // }
+        // catch(error){
+        //     console.log(error)
+        // }
+        try{
+            setTimeout(()=>{
+                try{
+                    console.log(rahul)
+                }
+                catch(error){
+                    console.log(error)
+                }
+            },100)
+        }
+        catch(error){
+            console.log(error)
+        }
+
+        // the above code shows we cannot write setTimeout inside try catch but we can write try actch inside setTimeout 
+
+        // console.log(rahul)
+        // becaue of above used setTimeout the script will stop and show error 
+            </script>
+</body>
+</html>

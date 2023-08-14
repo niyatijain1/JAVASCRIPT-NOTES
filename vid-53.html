@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loadScript(src, callback){
+            var script = document.createElement("script");
+            script.src= src;
+            script.onload = function(){
+                console.log("script loaded with src" + src);
+                callback(null,src);
+            }
+            script.onerror = function(){
+                console.log("error loading script " + src)
+                callback(new Error("src got some error"));
+            }
+            document.body.appendChild(script);
+
+        }
+         function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            alert("heelooji" + src);
+        }
+
+        // gudmrng(src)=>{
+        //     alert("gudmrngji")
+        // }
+
+        loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {
+            if(error){
+                console.log(error)
+            }
+            loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,function hello(error, src) {})
+           
+        })
+           
+        })
+           
+        })
+           
+        })
+           
+        })
+
+
+        
+
+    </script>
+</body>
+</html>

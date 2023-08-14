@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Animal{
+            constructor(name){
+                this._name = name
+            }
+            fly(){
+                console.log("mai ud raha hu")
+            }
+            get name(){
+                return this._name
+            }
+            set name(newname){
+                this._name = newname
+            }
+
+        }
+
+        let r = new Animal("bruno")
+        r.fly()
+        console.log(r.name)
+        r.name = "jack"
+        console.log(r.name)
+        let asf = "red"
+         console.log(asf instanceof Animal)
+        console.log(r instanceof Animal)
+    </script>
+</body>
+</html>

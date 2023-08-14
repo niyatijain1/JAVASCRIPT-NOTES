@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vid-32</title>
+</head>
+<body>
+    <div>
+        <!-- child nodes are direct children example head and body are sibling and direct children to html tag also span and p are child node to div and are sibling -->
+        <!-- decendent nodes are p and span are descendent nodes of div tag  -->
+        <p>this is me and i m great</p>
+        <span>sibling</span>
+    </div>
+    <script>
+        // below statement will return text node as space is present 
+        console.log(document.body.firstChild)
+        console.log(document.body.lastChild)
+        console.log(document.body.childNodes)
+        // this above will give node list 
+        // nodelist looks like an array but not an array its a collection but Arry.from can be used to convert it to an array 
+        let arr = Array.from(document.body.childNodes)
+        console.log(arr)
+
+
+    </script>
+    
+</body>
+</html>

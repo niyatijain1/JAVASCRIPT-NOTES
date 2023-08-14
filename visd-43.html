@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="conatiner">
+        i am strt of this conatiner
+        <div id = "first">I am a first element</div>
+        i am end of this conatainer
+    </div>
+    <script>
+        let a = document.getElementsByTagName("div")[0]
+        console.log(a.innerHTML)
+        // a.innerHTML = a.innerHTML + '<h1>hello world</h1>';
+
+        let div = document.createElement("div")
+        div.innerHTML = "<h1>hello world</h1>"
+        // a.appendChild(div);
+        // a.append(div);
+        // the above is used to add child to an element or append at the end of the node
+        // a.prepend(div) 
+        // insert at the beginning of the node 
+        // a.before(div)
+        // the above will insert just before node 
+        a.after(div)
+        // the above will insert after node 
+        a.replaceWith(div)
+        // the above will replace the whole element with new 
+        
+
+
+
+         </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // below example of synchronous programming that runs one by one code lines run one by one 
+        // let a = prompt("what is your name")
+        // let b = prompt("what is your age")
+        // let c = prompt("what is your favourite color")
+        // console.log(a +"is"+ "years old "+"with fav color as "+ c)
+
+        // example of asynchronous action 
+
+        // console.log("start")
+        // setTimeout(jain=()=>{
+        //     console.log("hello world")
+        // },3000)
+        // console.log("end")
+
+        // the main difference between asynchronous and synchronous programming is that synchronus actions are initiated and finished one by one and asynchronous actions are actions that we initiate now and are delayed for later eg setTimeout 
+
+        // callbacks 
+        function loadScript(src, callback){
+            var script = document.createElement("script");
+            script.src= src;
+            script.onload = function(){
+                console.log("script loaded with src" + src);
+                callback(null,src);
+            }
+            script.onerror = function(){
+                console.log("error loading script " + src)
+                callback(new Error("src got some error"));
+            }
+            document.body.appendChild(script);
+
+        }
+         hello=(error, src)=>{
+            if(error){
+                console.log(error)
+            }
+            alert("heelooji" + src);
+        }
+
+        // gudmrng(src)=>{
+        //     alert("gudmrngji")
+        // }
+
+        loadScript("https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ,hello)
+
+    </script>
+</body>
+</html>

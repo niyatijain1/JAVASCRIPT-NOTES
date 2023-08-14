@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // message = "good global"
+        // function hello(){
+        //     let message = "goodmorning"
+        //     {
+        //         let message = "gudafternoon"
+        //         console.log(message)
+        //     }
+        //     console.log(message)
+        // }
+        // hello()
+        // above is an example of scoping 
+
+        //  a function along with its lexical environment is a closure 
+        message = "good global"
+        // function hello(){
+        //     let message = "goodmorning"
+        //     {
+        //         let message = "gudafternoon"
+        //         console.log(message)
+        //     }
+        //     let c= function(){
+        //          console.log(message)
+           
+        //     }
+        //     return c
+        // }
+        // let c = hello()
+        // c()
+        // console.log(c)
+        // the above statement will return whole function c 
+        // while c() will return mesage only 
+
+
+        function init(){
+            var name = "Mozilla"
+            function displayName(){
+                console.log(name)
+            }
+            name = "harry"
+            return displayName;
+        }
+        let c = init()
+        c()
+
+        // in the above example displayName is a closure (a functiona along with its lexical envronment )
+
+        
+
+ </script>
+</body>
+</html>

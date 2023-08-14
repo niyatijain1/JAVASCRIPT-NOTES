@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+hello world
+<span id = "first"><b>hi</b>hey i m span</span>
+
+    
+    <script>
+        // console.log(document.getElementsByTagName('span')[0]);
+        let x = (document.getElementsByTagName('span')[0]);
+        console.log(x)
+        
+        // console.log shows the element dom tree while console.dir shows the element as an object which contains functions and methods  
+        // console.dir(document.getElementsByTagName('span')[0]);
+        let y = (document.getElementsByTagName('span')[0]);
+        console.dir(y)
+        
+
+
+
+        console.log(document.body.firstChild.nodeName)
+        console.log(document.body.firstElementChild.nodeName)
+        // the above statement will print nodeName im console 
+        
+        
+        console.log(first.innerHTML)
+        first.innerHTML = "<i> hey i am italic</i>"
+        console.log(first.innerHTML)
+        // .innerHTML property is used to get the  html of an element in the form of string and can also set it and is only valid for element nodes
+        
+        console.log(first.outerHTML)
+        first.outerHTML = "<div> hey</div>"
+        // console.log(first.outerHTML)
+        // outerhtml property is used to get the inner html + the element itself 
+
+        
+        console.log(document.body.firstChild)
+        console.log(document.body.firstChild.data)
+        console.log(document.body.firstChild.nodeValue)
+        // the above .data and .nodeValue are used to get value of text nodes 
+
+
+
+        console.log(document.body.textContent)
+        // the above element will give only text excluding the tags will only give text inside all elements 
+
+
+        
+        
+
+
+    </script>
+</body>
+</html>
